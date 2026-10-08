@@ -1,0 +1,190 @@
+/* Skills Header */
+.skills-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-title {
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-family: var(--font-serif);
+  color: var(--text);
+  margin: 1.5rem 0 1rem;
+  line-height: 1.2;
+}
+
+.skills-subtitle {
+  font-size: 1.15rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Tabs Navigation */
+.skills-tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.skills-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skills-tab-btn:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.skills-tab-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.2);
+}
+
+/* Panel Layout */
+.skills-active-panel {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  padding: 2.5rem !important;
+  text-align: left;
+  min-height: 350px;
+}
+
+.panel-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.panel-icon-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.panel-icon-header h2 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  color: var(--text);
+}
+
+.panel-intro p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.panel-skills-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Skill meters */
+.skill-meter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.meter-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.skill-name {
+  color: var(--text);
+}
+
+.skill-percentage {
+  color: var(--accent-2);
+}
+
+.meter-track {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+body.light .meter-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.meter-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+/* Conceptual knowledge cards */
+.conceptual-knowledge-section {
+  margin-top: 4.5rem;
+  text-align: center;
+}
+
+.concept-title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.concept-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem !important;
+  text-align: left;
+}
+
+.concept-check-icon {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.concept-badge span {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .skills-active-panel {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem !important;
+  }
+}

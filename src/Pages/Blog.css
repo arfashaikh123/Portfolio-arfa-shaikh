@@ -1,0 +1,116 @@
+/* Blog Header */
+.blog-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-title {
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-family: var(--font-serif);
+  color: var(--text);
+  margin: 1.5rem 0 1rem;
+  line-height: 1.2;
+}
+
+.blog-subtitle {
+  font-size: 1.15rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Grid layout */
+.blog-grid-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-post-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 2.25rem !important;
+  text-align: left;
+}
+
+.blog-post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.post-cat-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  letter-spacing: 0.05em;
+}
+
+.post-time-meta {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.post-time-meta .meta-item {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.blog-post-content {
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.blog-post-content h2 {
+  font-size: 1.35rem;
+  font-family: var(--font-serif);
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+  transition: color 0.3s ease;
+}
+
+.blog-post-card:hover .blog-post-content h2 {
+  color: var(--accent);
+}
+
+.blog-post-content p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.blog-post-footer {
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+  margin-top: auto;
+}
+
+.read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--accent);
+  transition: transform 0.3s ease;
+}
+
+.blog-post-card:hover .read-more-btn {
+  transform: translateX(4px);
+}
